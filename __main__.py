@@ -12,7 +12,7 @@ class Config(Frame):
 
     def createWidgets(self):
         projectFrame = LabelFrame(self.master, text="Defina os detalhes do projeto")
-        projectFrame.grid(row=0, column=0, sticky="w", padx=default_padx, pady=default_pady, ipadx=default_ipadx, ipady=default_ipady)
+        projectFrame.grid(row=0, column=0, sticky="w", ipadx=default_ipadx, ipady=default_ipady)
 
         directoryLabel = Label(projectFrame, text="Qual o diretório do projeto?")
         directoryLabel.grid(row=0, column=0, sticky="w")
@@ -21,7 +21,7 @@ class Config(Frame):
         directory.grid(row=0, column=1, sticky="e")
 
         buttonsFrame = LabelFrame(self.master, text="O que fazer?")
-        buttonsFrame.grid(row=1, columnspan=7, sticky="ns", ipadx=default_ipadx, ipady=default_ipady)
+        buttonsFrame.grid(row=0, column=1, columnspan=7, sticky="e", ipadx=default_ipadx, ipady=default_ipady)
 
         sair = Button(buttonsFrame, text="Sair", command=self.quit)
         sair.grid(row=0, column=0, sticky="w")
